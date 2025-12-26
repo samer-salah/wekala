@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head><script type="text/javascript" crossorigin="anonymous" async="" src="https://us-assets.i.posthog.com/static/array.js"></script><script src="https://static.readdy.ai/static/e.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة الوكالة للملابس الجاهزة - متجر الملابس النسائية والأطفال</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#E91E63',secondary:'#8E24AA'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+        .hero-section {
+            background-image: linear-gradient(to left, rgba(233, 30, 99, 0.1), rgba(255, 255, 255, 0.95)), url('https://readdy.ai/api/search-image?query=elegant%20modern%20women%20fashion%20boutique%20interior%20with%20beautiful%20displays%20of%20dresses%2C%20blouses%2C%20and%20stylish%20clothing.%20Contemporary%20retail%20store%20with%20warm%20lighting%2C%20soft%20pink%20and%20white%20color%20scheme%2C%20sophisticated%20shopping%20atmosphere%2C%20high-end%20fashion%20retail%20photography&width=1600&height=800&seq=1&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .category-card {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(233, 30, 99, 0.8), rgba(142, 36, 170, 0.8));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .category-card:hover::before {
+            opacity: 1;
+        }
+        .category-card .category-content {
+            position: relative;
+            z-index: 2;
+            transition: transform 0.3s ease;
+        }
+        .category-card:hover .category-content {
+            transform: translateY(-8px);
+        }
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        .product-card {
+            transition: all 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .offer-card {
+            background: linear-gradient(135deg, #E91E63, #8E24AA);
+            position: relative;
+            overflow: hidden;
+        }
+        .offer-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: rotate(45deg);
+        }
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(233, 30, 99, 0.1);
+        }
+        .stats-number {
+            background: linear-gradient(135deg, #E91E63, #8E24AA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .navbar-sticky {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        .section-divider {
+            background: linear-gradient(90deg, transparent, #E91E63, transparent);
+            height: 2px;
+            width: 100px;
+            margin: 0 auto;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2331/2331970.png">
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center gap-6">
+                    <a href="tel:01003714443" class="flex items-center gap-2 text-primary hover:text-primary/80 cursor-pointer transition-colors">
+                        <div class="w-6 h-6 flex items-center justify-center">
+                            <i class="ri-phone-line ri-lg"></i>
+                        </div>
+                        <span class="font-medium">01003714443</span>
+                    </a>
+                    <div class="flex items-center gap-2 text-gray-600">
+                        <div class="w-6 h-6 flex items-center justify-center">
+                            <i class="ri-map-pin-line ri-lg"></i>
+                        </div>
+                        <span class="text-sm">شربين شارع المركز - بجوار مطعم 100/100</span>
+                    </div>
+                </div>
+                <div class="font-['Pacifico'] text-3xl text-primary">al-wekala</div>
+                <div class="flex items-center gap-4">
+                    <a href="#contact" class="bg-primary text-white px-6 py-3 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap cursor-pointer">تواصل معنا</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar-sticky bg-white border-b border-gray-100" style="transform: translateY(0px);">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center items-center py-4">
+                <ul class="flex gap-8">
+                    <li><a href="#" class="text-gray-800 hover:text-primary font-medium cursor-pointer transition-colors">الرئيسية</a></li>
+                    <li><a href="#categories" class="text-gray-800 hover:text-primary font-medium cursor-pointer transition-colors">الأقسام</a></li>
+                    <li><a href="#products" class="text-gray-800 hover:text-primary font-medium cursor-pointer transition-colors">المنتجات</a></li>
+                    <li><a href="#offers" class="text-gray-800 hover:text-primary font-medium cursor-pointer transition-colors">العروض</a></li>
+                    <li><a href="#about" class="text-gray-800 hover:text-primary font-medium cursor-pointer transition-colors">من نحن</a></li>
+                    <li><a href="#contact" class="text-gray-800 hover:text-primary font-medium cursor-pointer transition-colors">اتصل بنا</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section py-24">
+        <div class="container mx-auto px-4 w-full">
+            <div class="max-w-2xl">
+                <h1 class="text-5xl font-bold text-gray-900 mb-6 leading-tight">شركة الوكالة للملابس الجاهزة</h1>
+                <p class="text-xl text-gray-700 mb-8 leading-relaxed">أجمل الملابس النسائية والأطفال بأحدث الموديلات والأسعار المناسبة. مجموعة واسعة من الملابس المنزلية والكاجوال العصرية التي تجمع بين الراحة والأناقة</p>
+                <div class="flex gap-4">
+                    <a href="#categories" class="bg-primary text-white px-8 py-4 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap cursor-pointer font-medium">تصفح المنتجات</a>
+                    <a href="#contact" class="bg-white text-primary border-2 border-primary px-8 py-4 !rounded-button hover:bg-gray-50 transition-colors whitespace-nowrap cursor-pointer font-medium">زورونا في المتجر</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="stats-number text-4xl font-bold mb-2">500+</div>
+                    <p class="text-gray-600 font-medium">عميل راضٍ</p>
+                </div>
+                <div class="text-center">
+                    <div class="stats-number text-4xl font-bold mb-2">1000+</div>
+                    <p class="text-gray-600 font-medium">قطعة ملابس</p>
+                </div>
+                <div class="text-center">
+                    <div class="stats-number text-4xl font-bold mb-2">5+</div>
+                    <p class="text-gray-600 font-medium">سنوات خبرة</p>
+                </div>
+                <div class="text-center">
+                    <div class="stats-number text-4xl font-bold mb-2">24/7</div>
+                    <p class="text-gray-600 font-medium">خدمة العملاء</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">أقسام المتجر</h2>
+                <div class="section-divider mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">نقدم مجموعة متنوعة من الملابس عالية الجودة لتلبية جميع احتياجاتك ومناسباتك المختلفة</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Women's Category -->
+                <div class="category-card rounded-xl overflow-hidden shadow-lg cursor-pointer">
+                    <div class="relative h-96">
+                        <img src="https://readdy.ai/api/search-image?query=elegant%20women%20clothing%20collection%20featuring%20stylish%20modern%20dresses%2C%20sophisticated%20blouses%2C%20and%20beautiful%20casual%20wear.%20Feminine%20fashion%20in%20soft%20pink%20and%20purple%20tones%2C%20luxurious%20fabric%20textures%2C%20professional%20fashion%20photography%20with%20elegant%20lighting%20and%20refined%20styling&amp;width=600&amp;height=600&amp;seq=2&amp;orientation=squarish" alt="ملابس نسائية" class="w-full h-full object-cover object-top">
+                        <div class="category-content absolute inset-0 flex items-end p-8">
+                            <div class="text-white">
+                                <h3 class="text-3xl font-bold mb-3">ملابس نسائية</h3>
+                                <p class="text-white/90 mb-6 text-lg">أناقة وأنوثة في كل قطعة</p>
+                                <div class="bg-white text-primary px-6 py-3 !rounded-button inline-block font-medium hover:bg-gray-100 transition-colors">تسوق الآن</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Home Wear Category -->
+                <div class="category-card rounded-xl overflow-hidden shadow-lg cursor-pointer">
+                    <div class="relative h-96">
+                        <img src="https://readdy.ai/api/search-image?query=comfortable%20home%20wear%20and%20loungewear%20collection%20for%20women%20featuring%20cozy%20pajamas%2C%20soft%20robes%2C%20and%20relaxed%20casual%20outfits.%20Comfortable%20indoor%20clothing%20in%20pastel%20colors%2C%20natural%20fabrics%2C%20relaxed%20lifestyle%20photography%20with%20warm%20home%20atmosphere&amp;width=600&amp;height=600&amp;seq=3&amp;orientation=squarish" alt="ملابس منزلية" class="w-full h-full object-cover object-top">
+                        <div class="category-content absolute inset-0 flex items-end p-8">
+                            <div class="text-white">
+                                <h3 class="text-3xl font-bold mb-3">ملابس منزلية</h3>
+                                <p class="text-white/90 mb-6 text-lg">راحة وأناقة في المنزل</p>
+                                <div class="bg-white text-primary px-6 py-3 !rounded-button inline-block font-medium hover:bg-gray-100 transition-colors">تسوق الآن</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Children's Category -->
+                <div class="category-card rounded-xl overflow-hidden shadow-lg cursor-pointer">
+                    <div class="relative h-96">
+                        <img src="https://readdy.ai/api/search-image?query=adorable%20children%20clothing%20collection%20with%20colorful%20playful%20outfits%20for%20boys%20and%20girls.%20Cute%20kids%20fashion%20with%20vibrant%20patterns%2C%20comfortable%20designs%2C%20joyful%20colors%2C%20modern%20children%20fashion%20photography%20with%20bright%20cheerful%20lighting%20and%20playful%20styling&amp;width=600&amp;height=600&amp;seq=4&amp;orientation=squarish" alt="ملابس أطفال" class="w-full h-full object-cover object-top">
+                        <div class="category-content absolute inset-0 flex items-end p-8">
+                            <div class="text-white">
+                                <h3 class="text-3xl font-bold mb-3">ملابس أطفال</h3>
+                                <p class="text-white/90 mb-6 text-lg">أزياء مرحة للصغار</p>
+                                <div class="bg-white text-primary px-6 py-3 !rounded-button inline-block font-medium hover:bg-gray-100 transition-colors">تسوق الآن</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="products" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">المنتجات المميزة</h2>
+                <div class="section-divider mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">اكتشف أحدث وأجمل المنتجات في متجرنا بجودة عالية وأسعار مناسبة</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-xl cursor-pointer" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                    <div class="relative">
+                        <img src="https://readdy.ai/api/search-image?query=elegant%20women%20dress%20in%20soft%20pink%20color%20with%20sophisticated%20modern%20design%2C%20beautiful%20fabric%20texture%20and%20feminine%20silhouette.%20High-quality%20studio%20fashion%20photography%20with%20clean%20white%20background%2C%20professional%20lighting%20showcasing%20elegant%20details%20and%20refined%20styling&amp;width=400&amp;height=500&amp;seq=5&amp;orientation=portrait" alt="فستان أنيق" class="w-full h-72 object-cover object-top">
+                        <div class="absolute top-3 right-3 bg-primary text-white px-3 py-1 text-xs !rounded-button font-medium">جديد</div>
+                        <div class="absolute top-3 left-3 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center cursor-pointer hover:bg-white transition-colors">
+                            <div class="w-5 h-5 flex items-center justify-center text-gray-600 hover:text-primary">
+                                <i class="ri-heart-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-gray-900 mb-2 text-lg">فستان أنيق للمناسبات</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">فستان عصري بتصميم راقي ومناسب للمناسبات الخاصة</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold text-xl">299 جنيه</span>
+                            <button class="bg-primary text-white px-4 py-2 !rounded-button text-sm hover:bg-primary/90 transition-colors whitespace-nowrap font-medium">أضف للسلة</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-xl cursor-pointer" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                    <div class="relative">
+                        <img src="https://readdy.ai/api/search-image?query=comfortable%20women%20pajama%20set%20in%20soft%20purple%20lavender%20color%2C%20cozy%20home%20wear%20with%20elegant%20comfortable%20design.%20High-quality%20studio%20photography%20with%20clean%20white%20background%2C%20relaxed%20lifestyle%20clothing%20showcasing%20comfort%20and%20style&amp;width=400&amp;height=500&amp;seq=6&amp;orientation=portrait" alt="بيجامة نسائية" class="w-full h-72 object-cover object-top">
+                        <div class="absolute top-3 right-3 bg-secondary text-white px-3 py-1 text-xs !rounded-button font-medium">عرض</div>
+                        <div class="absolute top-3 left-3 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center cursor-pointer hover:bg-white transition-colors">
+                            <div class="w-5 h-5 flex items-center justify-center text-gray-600 hover:text-primary">
+                                <i class="ri-heart-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-gray-900 mb-2 text-lg">طقم بيجامة مريح</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">بيجامة قطنية ناعمة ومريحة للاستخدام المنزلي</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-2">
+                                <span class="text-primary font-bold text-xl">179 جنيه</span>
+                                <span class="text-gray-500 line-through text-sm">220 جنيه</span>
+                            </div>
+                            <button class="bg-primary text-white px-4 py-2 !rounded-button text-sm hover:bg-primary/90 transition-colors whitespace-nowrap font-medium">أضف للسلة</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-xl cursor-pointer" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                    <div class="relative">
+                        <img src="https://readdy.ai/api/search-image?query=cute%20children%20outfit%20with%20colorful%20playful%20design%2C%20vibrant%20patterns%20and%20comfortable%20kids%20clothing%20in%20bright%20cheerful%20colors.%20Professional%20studio%20photography%20with%20clean%20white%20background%20showcasing%20joyful%20children%20fashion%20with%20quality%20details&amp;width=400&amp;height=500&amp;seq=7&amp;orientation=portrait" alt="ملابس أطفال" class="w-full h-72 object-cover object-top">
+                        <div class="absolute top-3 right-3 bg-primary text-white px-3 py-1 text-xs !rounded-button font-medium">مميز</div>
+                        <div class="absolute top-3 left-3 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center cursor-pointer hover:bg-white transition-colors">
+                            <div class="w-5 h-5 flex items-center justify-center text-gray-600 hover:text-primary">
+                                <i class="ri-heart-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-gray-900 mb-2 text-lg">طقم أطفال ملون</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">ملابس أطفال مرحة وملونة بجودة عالية ومريحة</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold text-xl">149 جنيه</span>
+                            <button class="bg-primary text-white px-4 py-2 !rounded-button text-sm hover:bg-primary/90 transition-colors whitespace-nowrap font-medium">أضف للسلة</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-xl cursor-pointer" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                    <div class="relative">
+                        <img src="https://readdy.ai/api/search-image?query=elegant%20women%20blouse%20in%20soft%20neutral%20fabric%2C%20professional%20and%20casual%20style%20with%20modern%20sophisticated%20fashion%20design.%20High-quality%20studio%20photography%20with%20clean%20background%20showcasing%20stylish%20contemporary%20clothing%20with%20refined%20details&amp;width=400&amp;height=500&amp;seq=8&amp;orientation=portrait" alt="بلوزة نسائية" class="w-full h-72 object-cover object-top">
+                        <div class="absolute top-3 left-3 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center cursor-pointer hover:bg-white transition-colors">
+                            <div class="w-5 h-5 flex items-center justify-center text-gray-600 hover:text-primary">
+                                <i class="ri-heart-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-gray-900 mb-2 text-lg">بلوزة كاجوال أنيقة</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">بلوزة عصرية مناسبة للعمل والمناسبات اليومية</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold text-xl">199 جنيه</span>
+                            <button class="bg-primary text-white px-4 py-2 !rounded-button text-sm hover:bg-primary/90 transition-colors whitespace-nowrap font-medium">أضف للسلة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-white text-primary border-2 border-primary px-8 py-4 !rounded-button hover:bg-gray-50 transition-colors whitespace-nowrap cursor-pointer font-medium">عرض المزيد من المنتجات</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers Section -->
+    <section id="offers" class="py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-primary/10">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">العروض الخاصة</h2>
+                <div class="section-divider mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">لا تفوت عروضنا المميزة واستمتع بأفضل الأسعار على مجموعة واسعة من المنتجات</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Offer 1 -->
+                <div class="offer-card rounded-2xl p-10 text-white">
+                    <div class="flex items-center justify-between">
+                        <div class="relative z-10">
+                            <h3 class="text-3xl font-bold mb-4">خصم 30% على جميع الملابس النسائية</h3>
+                            <p class="text-white/90 mb-6 text-lg">عرض لفترة محدودة على أجمل المجموعات النسائية</p>
+                            <div class="flex items-center gap-4 mb-6">
+                                <span class="bg-white text-primary px-4 py-2 !rounded-button font-bold text-lg">30% خصم</span>
+                                <span class="text-white/80">صالح حتى نهاية الشهر</span>
+                            </div>
+                            <button class="bg-white text-primary px-8 py-4 !rounded-button font-medium hover:bg-gray-100 transition-colors whitespace-nowrap cursor-pointer">تسوق الآن</button>
+                        </div>
+                        <div class="hidden md:block relative z-10">
+                            <div class="w-40 h-40 bg-white/20 rounded-full flex items-center justify-center">
+                                <div class="w-20 h-20 flex items-center justify-center text-white">
+                                    <i class="ri-shirt-line ri-3x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Offer 2 -->
+                <div class="offer-card rounded-2xl p-10 text-white" style="background: linear-gradient(135deg, #8E24AA, #E91E63);">
+                    <div class="flex items-center justify-between">
+                        <div class="relative z-10">
+                            <h3 class="text-3xl font-bold mb-4">اشتري 2 واحصل على الثالث مجاناً</h3>
+                            <p class="text-white/90 mb-6 text-lg">عرض خاص على ملابس الأطفال والملابس المنزلية</p>
+                            <div class="flex items-center gap-4 mb-6">
+                                <span class="bg-white text-secondary px-4 py-2 !rounded-button font-bold text-lg">2+1 مجاناً</span>
+                                <span class="text-white/80">على مجموعات مختارة</span>
+                            </div>
+                            <button class="bg-white text-secondary px-8 py-4 !rounded-button font-medium hover:bg-gray-100 transition-colors whitespace-nowrap cursor-pointer">اكتشف العرض</button>
+                        </div>
+                        <div class="hidden md:block relative z-10">
+                            <div class="w-40 h-40 bg-white/20 rounded-full flex items-center justify-center">
+                                <div class="w-20 h-20 flex items-center justify-center text-white">
+                                    <i class="ri-gift-line ri-3x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">آراء عملائنا</h2>
+                <div class="section-divider mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">نفتخر بثقة عملائنا وآرائهم الإيجابية حول منتجاتنا وخدماتنا</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card p-8 rounded-xl" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center ml-4">
+                            <div class="w-6 h-6 flex items-center justify-center text-primary">
+                                <i class="ri-user-3-line ri-lg"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">فاطمة محمد</h4>
+                            <p class="text-gray-600 text-sm">عميلة دائمة</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">منتجات رائعة وجودة ممتازة، أشتري دائماً من شركة الوكالة وأنصح الجميع بالتسوق منهم</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card p-8 rounded-xl" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center ml-4">
+                            <div class="w-6 h-6 flex items-center justify-center text-primary">
+                                <i class="ri-user-3-line ri-lg"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">عائشة أحمد</h4>
+                            <p class="text-gray-600 text-sm">أم لطفلين</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">أفضل متجر للأطفال، ملابس مريحة وألوان جميلة، والأسعار مناسبة جداً لجودة المنتجات</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card p-8 rounded-xl" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center ml-4">
+                            <div class="w-6 h-6 flex items-center justify-center text-primary">
+                                <i class="ri-user-3-line ri-lg"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">نورا سالم</h4>
+                            <p class="text-gray-600 text-sm">موظفة</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">خدمة عملاء ممتازة وتعامل راقي، المتجر يوفر كل ما أحتاجه من ملابس عملية وأنيقة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">لماذا تختار شركة الوكالة؟</h2>
+                <div class="section-divider mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">نسعى دائماً لتقديم أفضل الخدمات وأجود المنتجات بأسعار تنافسية</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- Feature 1 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 hover:bg-primary/20 transition-colors cursor-pointer">
+                        <div class="w-10 h-10 flex items-center justify-center text-primary">
+                            <i class="ri-medal-line ri-2x"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">جودة عالية</h3>
+                    <p class="text-gray-600 leading-relaxed">نختار منتجاتنا بعناية فائقة لضمان أعلى مستوى من الجودة والراحة</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 hover:bg-primary/20 transition-colors cursor-pointer">
+                        <div class="w-10 h-10 flex items-center justify-center text-primary">
+                            <i class="ri-price-tag-3-line ri-2x"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">أسعار مناسبة</h3>
+                    <p class="text-gray-600 leading-relaxed">نقدم أفضل الأسعار في السوق مع عروض وخصومات مستمرة</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 hover:bg-primary/20 transition-colors cursor-pointer">
+                        <div class="w-10 h-10 flex items-center justify-center text-primary">
+                            <i class="ri-shirt-line ri-2x"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">تشكيلة واسعة</h3>
+                    <p class="text-gray-600 leading-relaxed">مجموعة متنوعة من الملابس لجميع الأعمار والمناسبات</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 hover:bg-primary/20 transition-colors cursor-pointer">
+                        <div class="w-10 h-10 flex items-center justify-center text-primary">
+                            <i class="ri-customer-service-2-line ri-2x"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">خدمة عملاء ممتازة</h3>
+                    <p class="text-gray-600 leading-relaxed">فريق خدمة عملاء محترف ومتاح دائماً لمساعدتك</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-8">من نحن</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">شركة الوكالة للملابس الجاهزة هي إحدى الشركات الرائدة في مجال الأزياء النسائية وملابس الأطفال في منطقة شربين. تأسست الشركة بهدف تقديم أجود أنواع الملابس بأسعار مناسبة لجميع فئات المجتمع.</p>
+                    
+                    <p class="text-gray-600 mb-8 leading-relaxed text-lg">نحن نؤمن بأن الأناقة حق للجميع، لذلك نحرص على توفير مجموعة واسعة من الملابس العصرية والكلاسيكية التي تناسب جميع الأذواق والمناسبات. من الملابس اليومية البسيطة إلى الإطلالات الأنيقة للمناسبات الخاصة.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                        <div class="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-xl">
+                            <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-4">
+                                <div class="w-7 h-7 flex items-center justify-center text-primary">
+                                    <i class="ri-eye-line ri-xl"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">رؤيتنا</h3>
+                            <p class="text-gray-600 leading-relaxed">أن نكون الوجهة الأولى للأزياء النسائية وملابس الأطفال في المنطقة</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-secondary/5 to-secondary/10 p-6 rounded-xl">
+                            <div class="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center mb-4">
+                                <div class="w-7 h-7 flex items-center justify-center text-secondary">
+                                    <i class="ri-heart-line ri-xl"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">رسالتنا</h3>
+                            <p class="text-gray-600 leading-relaxed">تقديم أجود الملابس بأسعار مناسبة وخدمة عملاء متميزة</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-6">
+                        <a href="#contact" class="bg-primary text-white px-8 py-4 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap cursor-pointer font-medium">زورونا اليوم</a>
+                        <a href="tel:01003714443" class="bg-white text-primary border-2 border-primary px-8 py-4 !rounded-button hover:bg-gray-50 transition-colors whitespace-nowrap cursor-pointer font-medium">اتصل بنا</a>
+                    </div>
+                </div>
+                
+                <div class="rounded-2xl overflow-hidden shadow-xl">
+                    <img src="https://readdy.ai/api/search-image?query=modern%20elegant%20clothing%20store%20interior%20with%20beautiful%20displays%20of%20women%20and%20children%20clothing%2C%20well-organized%20racks%20with%20stylish%20outfits%2C%20professional%20retail%20lighting%2C%20welcoming%20atmosphere%20with%20pink%20and%20white%20color%20scheme%2C%20contemporary%20boutique%20design&amp;width=800&amp;height=600&amp;seq=9&amp;orientation=landscape" alt="متجر شركة الوكالة" class="w-full h-full object-cover object-top">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">اتصل بنا</h2>
+                <div class="section-divider mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">نحن هنا لخدمتكم، يمكنكم التواصل معنا من خلال الطرق التالية أو زيارتنا في المتجر</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div class="bg-white p-10 rounded-2xl shadow-lg">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-8">معلومات التواصل</h3>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-6">
+                            <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <div class="w-8 h-8 flex items-center justify-center text-primary">
+                                    <i class="ri-map-pin-line ri-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-2 text-xl">العنوان</h4>
+                                <p class="text-gray-600 leading-relaxed">شربين شارع المركز - بجوار مطعم 100/100</p>
+                                <p class="text-gray-600">محافظة الدقهلية، جمهورية مصر العربية</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-6">
+                            <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <div class="w-8 h-8 flex items-center justify-center text-primary">
+                                    <i class="ri-phone-line ri-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-2 text-xl">رقم الهاتف</h4>
+                                <p class="text-gray-600 text-lg">01003714443</p>
+                                <p class="text-gray-500">متاح للاستفسارات والطلبات</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-6">
+                            <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <div class="w-8 h-8 flex items-center justify-center text-primary">
+                                    <i class="ri-time-line ri-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-2 text-xl">ساعات العمل</h4>
+                                <p class="text-gray-600">السبت - الخميس: 9:00 صباحاً - 9:00 مساءً</p>
+                                <p class="text-gray-600">الجمعة: 2:00 ظهراً - 9:00 مساءً</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-6">
+                            <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <div class="w-8 h-8 flex items-center justify-center text-primary">
+                                    <i class="ri-service-line ri-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-2 text-xl">خدماتنا</h4>
+                                <p class="text-gray-600">بيع بالتجزئة - خدمة العملاء - استشارات الأزياء</p>
+                                <p class="text-gray-500">مساعدة في اختيار الملابس المناسبة</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10 pt-8 border-t border-gray-200">
+                        <h4 class="font-bold text-gray-900 mb-4 text-xl">كيفية الوصول إلينا</h4>
+                        <p class="text-gray-600 mb-6 leading-relaxed">يقع متجرنا في موقع مميز بشارع المركز في شربين، بجوار مطعم 100/100 المعروف. يمكنكم الوصول إلينا بسهولة من جميع أنحاء المدينة.</p>
+                        <div class="flex gap-4">
+                            <a href="tel:01003714443" class="bg-primary text-white px-6 py-3 !rounded-button text-sm hover:bg-primary/90 transition-colors whitespace-nowrap cursor-pointer font-medium">اتصل الآن</a>
+                            <a href="https://wa.me/201003714443" class="bg-green-500 text-white px-6 py-3 !rounded-button text-sm hover:bg-green-600 transition-colors whitespace-nowrap cursor-pointer font-medium">واتساب</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="rounded-2xl overflow-hidden shadow-xl h-[600px] bg-gray-200">
+                    <div style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png'); background-size: cover; background-position: center;" class="w-full h-full"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-gradient-to-r from-primary to-secondary">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-white">
+                <h2 class="text-3xl font-bold mb-4">اشترك في النشرة الإخبارية</h2>
+                <p class="text-white/90 mb-8 max-w-2xl mx-auto">احصل على آخر الأخبار والعروض الحصرية مباشرة في بريدك الإلكتروني</p>
+                <div class="max-w-md mx-auto flex gap-4">
+                    <input type="email" placeholder="أدخل بريدك الإلكتروني" class="flex-1 px-4 py-3 rounded-lg text-gray-900 border-none text-sm">
+                    <button class="bg-white text-primary px-6 py-3 !rounded-button font-medium hover:bg-gray-100 transition-colors whitespace-nowrap cursor-pointer">اشترك الآن</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <div class="font-['Pacifico'] text-3xl text-white mb-6">logo</div>
+                    <p class="text-gray-400 mb-8 leading-relaxed">شركة الوكالة للملابس الجاهزة - أناقة وجودة بأسعار مناسبة للجميع</p>
+                    <div class="flex gap-4">
+                        <a href="https://wa.me/201003714443" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-green-500 transition-colors cursor-pointer">
+                            <div class="w-6 h-6 flex items-center justify-center">
+                                <i class="ri-whatsapp-line ri-lg"></i>
+                            </div>
+                        </a>
+                        <a href="tel:01003714443" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-primary transition-colors cursor-pointer">
+                            <div class="w-6 h-6 flex items-center justify-center">
+                                <i class="ri-phone-line ri-lg"></i>
+                            </div>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-blue-600 transition-colors cursor-pointer">
+                            <div class="w-6 h-6 flex items-center justify-center">
+                                <i class="ri-facebook-line ri-lg"></i>
+                            </div>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-pink-600 transition-colors cursor-pointer">
+                            <div class="w-6 h-6 flex items-center justify-center">
+                                <i class="ri-instagram-line ri-lg"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6">الأقسام</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors cursor-pointer">ملابس نسائية</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors cursor-pointer">ملابس منزلية</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors cursor-pointer">ملابس أطفال</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors cursor-pointer">إكسسوارات</a></li>
+                        <li><a href="#offers" class="text-gray-400 hover:text-white transition-colors cursor-pointer">العروض الخاصة</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6">روابط سريعة</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors cursor-pointer">الرئيسية</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition-colors cursor-pointer">المنتجات</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors cursor-pointer">من نحن</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors cursor-pointer">اتصل بنا</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors cursor-pointer">سياسة الإرجاع</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors cursor-pointer">الشروط والأحكام</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6">معلومات التواصل</h3>
+                    <ul class="space-y-4">
+                        <li class="flex gap-3">
+                            <div class="w-6 h-6 flex items-center justify-center text-primary mt-1">
+                                <i class="ri-map-pin-line ri-lg"></i>
+                            </div>
+                            <span class="text-gray-400 leading-relaxed">شربين شارع المركز - بجوار مطعم 100/100</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <div class="w-6 h-6 flex items-center justify-center text-primary mt-1">
+                                <i class="ri-phone-line ri-lg"></i>
+                            </div>
+                            <span class="text-gray-400">01003714443</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <div class="w-6 h-6 flex items-center justify-center text-primary mt-1">
+                                <i class="ri-time-line ri-lg"></i>
+                            </div>
+                            <span class="text-gray-400">9:00 ص - 9:00 م</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <div class="w-6 h-6 flex items-center justify-center text-primary mt-1">
+                                <i class="ri-mail-line ri-lg"></i>
+                            </div>
+                            <span class="text-gray-400">info@alwekala.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400 leading-relaxed">© 2025 شركة الوكالة للملابس الجاهزة. جميع الحقوق محفوظة. تصميم وتطوير بواسطة فريق التطوير</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/201003714443" class="floating-whatsapp cursor-pointer">
+        <div class="w-8 h-8 flex items-center justify-center text-white">
+            <i class="ri-whatsapp-fill ri-xl"></i>
+        </div>
+    </a>
+
+    <script type="text/javascript" crossorigin="anonymous" src="https://us-assets.i.posthog.com/static/surveys.js?v=1.310.1"></script><script type="text/javascript" crossorigin="anonymous" src="https://us-assets.i.posthog.com/array/phc_V7JMHB0fVJGRu8UHyrsj6pSL1BS76P5zD8qCi7lrTTV/config.js"></script><script type="text/javascript" crossorigin="anonymous" src="https://us-assets.i.posthog.com/static/lazy-recorder.js?v=1.310.1"></script><script id="smooth-scroll">
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script id="product-interactions">
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('button').forEach(button => {
+                if (button.textContent.includes('أضف للسلة')) {
+                    button.addEventListener('click', function() {
+                        this.textContent = 'تم الإضافة!';
+                        this.classList.add('bg-green-500');
+                        this.classList.remove('bg-primary');
+                        
+                        setTimeout(() => {
+                            this.textContent = 'أضف للسلة';
+                            this.classList.remove('bg-green-500');
+                            this.classList.add('bg-primary');
+                        }, 2000);
+                    });
+                }
+            });
+        });
+    </script>
+
+    <script id="newsletter-form">
+        document.addEventListener('DOMContentLoaded', function() {
+            const newsletterBtn = document.querySelector('button:contains("اشترك الآن")');
+            
+            document.querySelectorAll('button').forEach(button => {
+                if (button.textContent.includes('اشترك الآن')) {
+                    button.addEventListener('click', function() {
+                        const email = this.previousElementSibling.value;
+                        if (email && email.includes('@')) {
+                            this.textContent = 'تم الاشتراك!';
+                            this.classList.add('bg-green-500');
+                            this.classList.remove('bg-white', 'text-primary');
+                            this.classList.add('text-white');
+                            this.previousElementSibling.value = '';
+                            
+                            setTimeout(() => {
+                                this.textContent = 'اشترك الآن';
+                                this.classList.remove('bg-green-500', 'text-white');
+                                this.classList.add('bg-white', 'text-primary');
+                            }, 3000);
+                        } else {
+                            alert('يرجى إدخال بريد إلكتروني صحيح');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+    <script id="floating-animations">
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            const animateElements = document.querySelectorAll('.product-card, .testimonial-card');
+            animateElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
+    </script>
+
+    <script id="navbar-scroll-effect">
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.querySelector('.navbar-sticky');
+            let lastScrollY = window.scrollY;
+
+            window.addEventListener('scroll', () => {
+                const currentScrollY = window.scrollY;
+                
+                if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                    navbar.style.transform = 'translateY(-100%)';
+                } else {
+                    navbar.style.transform = 'translateY(0)';
+                }
+                
+                lastScrollY = currentScrollY;
+            });
+        });
+    </script>
+<img src="https://readdy.ai/api/search-image?query=elegant%20women%20dress" alt="منتج" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/201003714443" class="floating-whatsapp">
+        <i class="ri-whatsapp-line text-white text-3xl"></i>
+    </a>
+</body>
+</html>
